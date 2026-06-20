@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>साहित्यिक कुना | परिवर्तनका लागि आवाज</title>
+  <meta name="description" content="स्थानीय लेखकहरूका कथा, कविता, धारावाहिक उपन्यास तथा विविध साहित्यिक सिर्जनाहरूको सङ्गालो।">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">अ</div>
+        <div class="logo-text">
+          <span class="logo-main" data-i18n="logo_main">परिवर्तनका लागि आवाज</span>
+          <span class="logo-sub" data-i18n="logo_sub">Pariwantan Ka Lagi Aawaj</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">गृहपृष्ठ (Home)</a></li>
+          <li><a href="news.html" class="nav-link" data-i18n="nav_news">समाचार (News)</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">तस्बिरहरू (Gallery)</a></li>
+          <li><a href="creative.html" class="nav-link active" data-i18n="nav_creative">सृजना (Creative Corner)</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">हाम्रो बारेमा (About)</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">सम्पर्क (Contact)</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="nav-search-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container animate-fade-in" style="min-height: 70vh; padding: 2.5rem 0;">
+    <!-- 1. CREATIVE LIST VIEW -->
+    <div id="creative-list-view">
+      <div class="section-header">
+        <h1 class="section-title" data-i18n="section_creative_title">साहित्यिक कुना (Sahitya/Literature)</h1>
+      </div>
+
+      <!-- Tab Filters -->
+      <div class="tab-container" id="creative-type-tabs">
+        <div class="tab-btn active" data-type="Story" data-i18n="tab_story">कथाहरू (Short Stories)</div>
+        <div class="tab-btn" data-type="Poem" data-i18n="tab_poem">कविताहरू (Poems)</div>
+        <div class="tab-btn" data-type="Novel" data-i18n="tab_novel">उपन्यासहरू (Novels)</div>
+      </div>
+
+      <!-- Literature card grid -->
+      <div class="card-grid" id="creative-grid-container">
+        <!-- Rendered Dynamically -->
+      </div>
+    </div>
+
+    <!-- 2. CREATIVE READER PANE VIEW -->
+    <div id="creative-reader-view" style="display: none;">
+      <!-- Back button -->
+      <button class="chapter-btn" id="back-to-creative-list" style="margin-bottom: 2rem;" data-i18n="creative_back_btn">
+        <i class="fas fa-arrow-left"></i> रचनाहरूको सूचीमा फर्कनुहोस्
+      </button>
+
+      <article class="reader-container" style="margin-top: 0;">
+        <div class="reader-header">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+            <span class="creative-badge" id="reader-type-badge">TYPE</span>
+            
+            <!-- Typography Toolbar Controls -->
+            <div class="reader-controls">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;" data-i18n="reader_font_size">अक्षर:</span>
+              <button class="reader-ctrl-btn" id="font-dec" title="Decrease size">A-</button>
+              <button class="reader-ctrl-btn" id="font-inc" title="Increase size">A+</button>
+              <span style="border-left: 1px solid var(--border); height: 16px; margin: 0 4px;"></span>
+              <button class="reader-ctrl-btn" id="font-serif" title="Serif Font" style="font-family: var(--font-serif); font-size: 0.9rem;" data-i18n="reader_font_serif">S</button>
+              <button class="reader-ctrl-btn" id="font-sans" title="Sans Font" style="font-family: var(--font-sans); font-size: 0.9rem;" data-i18n="reader_font_sans"> Sans </button>
+            </div>
+          </div>
+          
+          <h1 class="reader-title" id="reader-title">LITERATURE TITLE</h1>
+          
+          <div class="reader-meta">
+            <span style="font-weight: 600; color: var(--text-muted);">
+              <i class="far fa-user"></i> <span id="reader-author">AUTHOR</span> &nbsp;|&nbsp; 
+              <i class="far fa-clock"></i> <span id="reader-readtime">Read Time</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Serialized Novel Chapter Header -->
+        <h2 id="reader-chapter-title" style="font-family: var(--font-serif); text-align: center; margin-bottom: 2rem; color: var(--primary); font-size: 1.6rem; display: none;">Chapter Title</h2>
+
+        <!-- Text Content Area -->
+        <div class="reader-content font-serif-active" id="reader-text-body" style="font-size: 1.25rem;">
+          <!-- Content Body Injected -->
+        </div>
+
+        <!-- Chapter Navigation (Only shown for Novels) -->
+        <div class="chapter-nav" id="novel-chapter-nav" style="display: none;">
+          <button class="chapter-btn" id="prev-chapter-btn" data-i18n="reader_chapter_prev"><i class="fas fa-chevron-left"></i> अघिल्लो अध्याय</button>
+          <button class="chapter-btn" id="next-chapter-btn" data-i18n="reader_chapter_next">पछिल्लो अध्याय <i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Reader Like & Share -->
+        <div class="reader-footer">
+          <div class="reader-stats">
+            <button class="stat-btn" id="like-content-btn">
+              <i class="far fa-heart" id="like-icon" style="color: var(--primary); font-size: 1.25rem;"></i> 
+              <span id="likes-count">0</span> <span data-i18n="like_btn_text">मनपर्यो (Likes)</span>
+            </button>
+          </div>
+          <div class="share-links">
+            <span class="share-title">साझा गर्नुहोस्:</span>
+            <a href="#" class="social-link" style="background-color: #1877F2;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" style="background-color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link" style="background-color: #1DA1F2;"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Author Box -->
+        <div class="author-box" id="reader-author-box">
+          <img class="author-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200" alt="Author">
+          <div class="author-info">
+            <span class="author-name" id="reader-author-name">लेखक</span>
+            <span class="author-bio">परिवर्तनका लागि आवाजका नियमित साहित्यिक योगदानकर्ता। स्थानीय संस्कृति र दर्शनमा कलम चलाउनुहुन्छ।</span>
+          </div>
+        </div>
+
+        <!-- Comment Section -->
+        <div class="comments-section">
+          <h3 class="comments-title"><span data-i18n="comments_section_title">प्रतिक्रियाहरू</span> (<span id="comments-count">0</span>)</h3>
+          
+          <!-- Submit Comment Form -->
+          <form class="comment-form" id="reader-comment-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="तपाईंको नाम (Your Name) *" required id="comment-author" data-i18n="comment_label_name">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="आफ्नो विचार/प्रतिक्रिया लेख्नुहोस्... *" required id="comment-text" data-i18n="comment_placeholder_text"></textarea>
+            </div>
+            <button type="submit" class="btn-primary" data-i18n="comment_btn_submit">प्रतिक्रिया बुझाउनुहोस्</button>
+          </form>
+
+          <!-- Comment List -->
+          <div class="comment-list" id="reader-comment-list">
+            <!-- Dynamic comments list -->
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo-link footer-logo">
+          <div class="logo-icon" style="box-shadow: none;">अ</div>
+          <div class="logo-text">
+            <span class="logo-main" data-i18n="logo_main">परिवर्तनका लागि आवाज</span>
+            <span class="logo-sub" style="color: var(--accent);" data-i18n="logo_sub">Pariwantan Ka Lagi Aawaj</span>
+          </div>
+        </div>
+        <p class="footer-desc" data-i18n="footer_desc">
+          यो एक स्थानीय सञ्चार माध्यम हो, जसले समाजमा सकारात्मक परिवर्तनका लागि स्थानीय आवाज, संस्कृति, साहित्य र जनचासोका सवालहरूलाई उजागर गर्दछ।
+        </p>
+        <div class="footer-socials">
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_links_title">द्रुत लिङ्कहरू</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">गृहपृष्ठ</a></li>
+          <li><a href="news.html" data-i18n="nav_news">ताजा समाचार</a></li>
+          <li><a href="gallery.html" data-i18n="nav_gallery">तस्बिर ग्यालरी</a></li>
+          <li><a href="creative.html" data-i18n="nav_creative">साहित्यिक कुना</a></li>
+          <li><a href="about.html" data-i18n="nav_about">हाम्रो बारेमा</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_news_title">विधागत समाचार</h3>
+        <ul class="footer-links">
+          <li><a href="news.html?cat=Local" data-i18n="cat_local">स्थानीय (Local)</a></li>
+          <li><a href="news.html?cat=Society" data-i18n="cat_society">समाज (Society)</a></li>
+          <li><a href="news.html?cat=Culture" data-i18n="cat_culture">संस्कृति (Culture)</a></li>
+          <li><a href="news.html?cat=Environment" data-i18n="cat_environment">वातावरण (Environment)</a></li>
+          <li><a href="news.html?cat=Politics" data-i18n="cat_politics">राजनीति (Politics)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_contact_title">सम्पर्क जानकारी</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-top: 0.25rem;"></i>
+            <span data-i18n="footer_contact_address">धुलिखेल नगरपालिका-४, काभ्रेपलाञ्चोक, नेपाल</span>
+          </li>
+          <li>
+            <i class="fas fa-phone" style="color: var(--accent);"></i>
+            <span>+९७७-११-४९०१२३, ९८५१२३४५६७</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope" style="color: var(--accent);"></i>
+            <span>info@pariwantanaawaj.org.np</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; २०२६ <span data-i18n="footer_rights">परिवर्तनका लागि आवाज। सबै अधिकार सुरक्षित।</span> | <a href="admin.html" style="color: var(--accent); font-weight: 600;" data-i18n="footer_admin_link">नियन्त्रण कक्ष (Admin Panel)</a></p>
+      <p data-i18n="footer_design">डिजाईन: <a href="about.html" style="color: var(--accent); font-weight: 600;">स्थानीय युवा सञ्जाल</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/translator.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/creative.js"></script>
+</body>
+</html>

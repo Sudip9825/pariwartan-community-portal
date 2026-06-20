@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>तस्बिर ग्यालरी | परिवर्तनका लागि आवाज</title>
+  <meta name="description" content="स्थानीय कला, सम्पदा, चाडपर्व, प्राकृतिक दृश्यहरू र जनजीवनका जीवन्त तस्बिरहरू।">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">अ</div>
+        <div class="logo-text">
+          <span class="logo-main" data-i18n="logo_main">परिवर्तनका लागि आवाज</span>
+          <span class="logo-sub" data-i18n="logo_sub">Pariwantan Ka Lagi Aawaj</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">गृहपृष्ठ (Home)</a></li>
+          <li><a href="news.html" class="nav-link" data-i18n="nav_news">समाचार (News)</a></li>
+          <li><a href="gallery.html" class="nav-link active" data-i18n="nav_gallery">तस्बिरहरू (Gallery)</a></li>
+          <li><a href="creative.html" class="nav-link" data-i18n="nav_creative">सृजना (Creative Corner)</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">हाम्रो बारेमा (About)</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">सम्पर्क (Contact)</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="nav-search-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container animate-fade-in" style="min-height: 70vh; padding: 2.5rem 0;">
+    <div class="section-header">
+      <h1 class="section-title" data-i18n="nav_gallery">तस्बिर ग्यालरी (Photo Gallery)</h1>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="filter-bar" style="margin-bottom: 2.5rem; justify-content: center;">
+      <div class="filters" id="gallery-filters">
+        <button class="filter-btn active" data-category="All" data-i18n="cat_all">सबै तस्बिर</button>
+        <button class="filter-btn" data-category="Places" data-i18n="cat_places">ठाउँहरू (Places)</button>
+        <button class="filter-btn" data-category="Events" data-i18n="cat_events">घटनाहरू (Events)</button>
+        <button class="filter-btn" data-category="Culture" data-i18n="cat_culture">संस्कृति (Culture)</button>
+        <button class="filter-btn" data-category="People" data-i18n="cat_people">मानिसहरू (People)</button>
+      </div>
+    </div>
+
+    <!-- Gallery Masonry Grid -->
+    <div class="gallery-grid" id="gallery-grid-container" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+      <!-- Rendered Dynamically -->
+    </div>
+
+    <!-- Lightbox Modal overlay -->
+    <div class="lightbox" id="gallery-lightbox">
+      <div class="lightbox-close" id="close-lightbox">&times;</div>
+      <div class="lightbox-nav lightbox-prev" id="prev-lightbox"><i class="fas fa-chevron-left"></i></div>
+      
+      <div class="lightbox-content">
+        <img class="lightbox-img" id="lightbox-image" src="" alt="">
+      </div>
+      
+      <div class="lightbox-nav lightbox-next" id="next-lightbox"><i class="fas fa-chevron-right"></i></div>
+      
+      <div class="lightbox-caption">
+        <h4 class="lightbox-title" id="lightbox-title">Image Title</h4>
+        <p class="lightbox-desc" id="lightbox-desc">Image description</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo-link footer-logo">
+          <div class="logo-icon" style="box-shadow: none;">अ</div>
+          <div class="logo-text">
+            <span class="logo-main" data-i18n="logo_main">परिवर्तनका लागि आवाज</span>
+            <span class="logo-sub" style="color: var(--accent);" data-i18n="logo_sub">Pariwantan Ka Lagi Aawaj</span>
+          </div>
+        </div>
+        <p class="footer-desc" data-i18n="footer_desc">
+          यो एक स्थानीय सञ्चार माध्यम हो, जसले समाजमा सकारात्मक परिवर्तनका लागि स्थानीय आवाज, संस्कृति, साहित्य र जनचासोका सवालहरूलाई उजागर गर्दछ।
+        </p>
+        <div class="footer-socials">
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_links_title">द्रुत लिङ्कहरू</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">गृहपृष्ठ</a></li>
+          <li><a href="news.html" data-i18n="nav_news">ताजा समाचार</a></li>
+          <li><a href="gallery.html" data-i18n="nav_gallery">तस्बिर ग्यालरी</a></li>
+          <li><a href="creative.html" data-i18n="nav_creative">साहित्यिक कुना</a></li>
+          <li><a href="about.html" data-i18n="nav_about">हाम्रो बारेमा</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_news_title">विधागत समाचार</h3>
+        <ul class="footer-links">
+          <li><a href="news.html?cat=Local" data-i18n="cat_local">स्थानीय (Local)</a></li>
+          <li><a href="news.html?cat=Society" data-i18n="cat_society">समाज (Society)</a></li>
+          <li><a href="news.html?cat=Culture" data-i18n="cat_culture">संस्कृति (Culture)</a></li>
+          <li><a href="news.html?cat=Environment" data-i18n="cat_environment">वातावरण (Environment)</a></li>
+          <li><a href="news.html?cat=Politics" data-i18n="cat_politics">राजनीति (Politics)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_contact_title">सम्पर्क जानकारी</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-top: 0.25rem;"></i>
+            <span data-i18n="footer_contact_address">धुलिखेल नगरपालिका-४, काभ्रेपलाञ्चोक, नेपाल</span>
+          </li>
+          <li>
+            <i class="fas fa-phone" style="color: var(--accent);"></i>
+            <span>+९७७-११-४९०१२३, ९८५१२३४५६७</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope" style="color: var(--accent);"></i>
+            <span>info@pariwantanaawaj.org.np</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; २०२६ <span data-i18n="footer_rights">परिवर्तनका लागि आवाज। सबै अधिकार सुरक्षित।</span> | <a href="admin.html" style="color: var(--accent); font-weight: 600;" data-i18n="footer_admin_link">नियन्त्रण कक्ष (Admin Panel)</a></p>
+      <p data-i18n="footer_design">डिजाईन: <a href="about.html" style="color: var(--accent); font-weight: 600;">स्थानीय युवा सञ्जाल</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/translator.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

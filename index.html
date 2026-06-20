@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>परिवर्तनका लागि आवाज | Pariwantan Ka Lagi Aawaj - Community Outlet</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Pariwantan Ka Lagi Aawaj (Voice for Change) is a local community news, photography, and creative literature outlet for local poets, writers, and journalists.">
+  <meta name="keywords" content="Nepali News, Sahitya, Local media, Literature, Myaalu Chautari, Nepal Gallery, Voice for change">
+  <meta property="og:title" content="परिवर्तनका लागि आवाज | Pariwantan Ka Lagi Aawaj">
+  <meta property="og:description" content="Local community news, photography, and creative literature outlet.">
+  <meta property="og:type" content="website">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">अ</div>
+        <div class="logo-text">
+          <span class="logo-main" data-i18n="logo_main">परिवर्तनका लागि आवाज</span>
+          <span class="logo-sub" data-i18n="logo_sub">Pariwantan Ka Lagi Aawaj</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav_home">गृहपृष्ठ (Home)</a></li>
+          <li><a href="news.html" class="nav-link" data-i18n="nav_news">समाचार (News)</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">तस्बिरहरू (Gallery)</a></li>
+          <li><a href="creative.html" class="nav-link" data-i18n="nav_creative">सृजना (Creative Corner)</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">हाम्रो बारेमा (About)</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">सम्पर्क (Contact)</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="nav-search-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (Featured Breaking News & Sidebar Recent News) -->
+    <section class="hero-section container">
+      <div class="hero-grid" id="hero-grid-container">
+        <!-- Rendered Dynamically -->
+        <div style="height: 480px; display: flex; align-items: center; justify-content: center; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border);">
+          <div style="text-align: center; color: var(--text-muted);">लोड हुँदैछ...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="container" style="padding: 2rem 0;">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section_news_title">ताजा समाचार (Latest News)</h2>
+        <a href="news.html" class="section-link" data-i18n="section_news_link">थप समाचारहरू <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="card-grid" id="latest-news-container">
+        <!-- Rendered Dynamically -->
+      </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="section_gallery_title">हाम्रो परिवेश (Photo Gallery)</h2>
+          <a href="gallery.html" class="section-link" data-i18n="section_gallery_link">सबै तस्बिरहरू <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="gallery-grid" id="gallery-preview-container">
+          <!-- Rendered Dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Corner Section -->
+    <section class="container" style="padding: 2rem 0 4rem 0;">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section_creative_title">साहित्यिक कुना (Creative Corner)</h2>
+        <a href="creative.html" class="section-link" data-i18n="section_creative_link">सबै रचनाहरू <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="creative-preview-grid" id="creative-preview-container">
+        <!-- Rendered Dynamically -->
+      </div>
+    </section>
+
+    <!-- Newsletter & Channels Signup Section -->
+    <section class="container">
+      <div class="newsletter-section">
+        <div class="newsletter-content animate-slide-up">
+          <h2 class="newsletter-title" data-i18n="newsletter_title">सामुदायिक अभियानमा जोडिनुहोस्</h2>
+          <p class="newsletter-subtitle" data-i18n="newsletter_subtitle">स्थानीय समाचार, कविता, कथाहरू र गाउँका ताजा अपडेट सिधै आफ्नो मोबाइल वा इमेलमा पाउनको लागि साइन अप गर्नुहोस्।</p>
+          <form class="newsletter-form" id="newsletter-form-home">
+            <input type="email" class="newsletter-input" placeholder="तपाईंको इमेल ठेगाना लेख्नुहोस्..." required id="news-email" data-i18n="newsletter_placeholder">
+            <button type="submit" class="btn-accent" data-i18n="newsletter_subscribe">सदस्य बन्नुहोस्</button>
+          </form>
+          <div class="newsletter-channels">
+            <a href="#" class="channel-btn"><i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.2rem;"></i> WhatsApp Community</a>
+            <a href="#" class="channel-btn"><i class="fab fa-facebook-messenger" style="color: #0084FF; font-size: 1.2rem;"></i> Messenger Updates</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo-link footer-logo">
+          <div class="logo-icon" style="box-shadow: none;">अ</div>
+          <div class="logo-text">
+            <span class="logo-main" data-i18n="logo_main">परिवर्तनका लागि आवाज</span>
+            <span class="logo-sub" style="color: var(--accent);" data-i18n="logo_sub">Pariwantan Ka Lagi Aawaj</span>
+          </div>
+        </div>
+        <p class="footer-desc" data-i18n="footer_desc">
+          यो एक स्थानीय सञ्चार माध्यम हो, जसले समाजमा सकारात्मक परिवर्तनका लागि स्थानीय आवाज, संस्कृति, साहित्य र जनचासोका सवालहरूलाई उजागर गर्दछ।
+        </p>
+        <div class="footer-socials">
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_links_title">द्रुत लिङ्कहरू</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">गृहपृष्ठ</a></li>
+          <li><a href="news.html" data-i18n="nav_news">ताजा समाचार</a></li>
+          <li><a href="gallery.html" data-i18n="nav_gallery">तस्बिर ग्यालरी</a></li>
+          <li><a href="creative.html" data-i18n="nav_creative">साहित्यिक कुना</a></li>
+          <li><a href="about.html" data-i18n="nav_about">हाम्रो बारेमा</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_news_title">विधागत समाचार</h3>
+        <ul class="footer-links">
+          <li><a href="news.html?cat=Local" data-i18n="cat_local">स्थानीय (Local)</a></li>
+          <li><a href="news.html?cat=Society" data-i18n="cat_society">समाज (Society)</a></li>
+          <li><a href="news.html?cat=Culture" data-i18n="cat_culture">संस्कृति (Culture)</a></li>
+          <li><a href="news.html?cat=Environment" data-i18n="cat_environment">वातावरण (Environment)</a></li>
+          <li><a href="news.html?cat=Politics" data-i18n="cat_politics">राजनीति (Politics)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_contact_title">सम्पर्क जानकारी</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-top: 0.25rem;"></i>
+            <span data-i18n="footer_contact_address">धुलिखेल नगरपालिका-४, काभ्रेपलाञ्चोक, नेपाल</span>
+          </li>
+          <li>
+            <i class="fas fa-phone" style="color: var(--accent);"></i>
+            <span>+९७७-११-४९०१२३, ९८५१२३४५६७</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope" style="color: var(--accent);"></i>
+            <span>info@pariwantanaawaj.org.np</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; २०२६ <span data-i18n="footer_rights">परिवर्तनका लागि आवाज। सबै अधिकार सुरक्षित।</span> | <a href="admin.html" style="color: var(--accent); font-weight: 600;" data-i18n="footer_admin_link">नियन्त्रण कक्ष (Admin Panel)</a></p>
+      <p data-i18n="footer_design">डिजाईन: <a href="about.html" style="color: var(--accent); font-weight: 600;">स्थानीय युवा सञ्जाल</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/translator.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Home Specific Dynamic Renderer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof APP_DATA === 'undefined') return;
+
+      window.dbReady.then(() => {
+        // 1. Render Hero Grid
+        renderHero();
+
+        // 2. Render Latest News Cards (Limit to 3)
+        renderLatestNews();
+
+        // 3. Render Gallery Preview (Limit to 4)
+        renderGalleryPreview();
+
+        // 4. Render Creative Preview
+        renderCreativePreview();
+      });
+
+      // Newsletter form submit
+      const form = document.getElementById('newsletter-form-home');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('news-email').value;
+          if (typeof showNotification === 'function') {
+            const msg = localStorage.getItem('lang') === 'en' 
+              ? `Thank you! Your email (${email}) has been registered for our newsletter.`
+              : `धन्यवाद! तपाईंको इमेल (${email}) हाम्रो न्युजलेटरको लागि दर्ता भएको छ।`;
+            showNotification(msg);
+          } else {
+            const msg = localStorage.getItem('lang') === 'en'
+              ? `Thank you for subscribing! We will send emails.`
+              : `सदस्य बन्नु भएकोमा धन्यवाद! हामी इमेल पठाउनेछौं।`;
+            alert(msg);
+          }
+          form.reset();
+        });
+      }
+    });
+
+    function renderHero() {
+      const heroContainer = document.getElementById('hero-grid-container');
+      if (!heroContainer) return;
+
+      const newsList = APP_DATA.news;
+      const featured = newsList.find(n => n.featured) || newsList[0];
+      const sideNews = newsList.filter(n => n.id !== featured.id).slice(0, 3);
+
+      let sideHtml = '';
+      sideNews.forEach(item => {
+        sideHtml += `
+          <div class="sidebar-card">
+            <span class="card-badge" style="position: static; align-self: flex-start; margin-bottom: 0.25rem;">
+              ${t(item.category)}
+            </span>
+            <a href="news.html?id=${item.id}" class="sidebar-title">${t(item.title)}</a>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">${translateDate(item.date)}</span>
+          </div>
+        `;
+      });
+
+      const heroHtml = `
+        <!-- Main Featured Card -->
+        <div class="hero-featured animate-fade-in">
+          <img class="hero-img" src="${featured.image}" alt="${t(featured.title)}">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="hero-category">${t(featured.category)}</span>
+            <a href="news.html?id=${featured.id}"><h1 class="hero-title">${t(featured.title)}</h1></a>
+            <div class="hero-meta">
+              <span><i class="far fa-user"></i> ${t(featured.author)}</span>
+              <span><i class="far fa-calendar-alt"></i> ${translateDate(featured.date)}</span>
+              <span><i class="far fa-clock"></i> ${t(featured.readTime)}</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar Cards -->
+        <div class="hero-sidebar animate-fade-in" style="animation-delay: 0.15s;">
+          ${sideHtml}
+        </div>
+      `;
+
+      heroContainer.innerHTML = heroHtml;
+    }
+
+    function renderLatestNews() {
+      const container = document.getElementById('latest-news-container');
+      if (!container) return;
+
+      // Slice 3 articles for homepage latest news grid
+      const newsToDisplay = APP_DATA.news.slice(0, 3);
+      let html = '';
+
+      newsToDisplay.forEach(item => {
+        html += `
+          <article class="card animate-slide-up">
+            <div class="card-img-wrapper">
+              <img class="card-img" src="${item.image}" alt="${t(item.title)}">
+              <span class="card-badge">${t(item.category)}</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span><i class="far fa-calendar-alt"></i> ${translateDate(item.date)}</span>
+                <span><i class="far fa-clock"></i> ${t(item.readTime)}</span>
+              </div>
+              <a href="news.html?id=${item.id}"><h3 class="card-title">${t(item.title)}</h3></a>
+              <p class="card-excerpt">${t(item.excerpt)}</p>
+              <div class="card-footer">
+                <span class="card-author"><i class="far fa-user"></i> ${t(item.author)}</span>
+                <a href="news.html?id=${item.id}" class="read-more-btn">${t("news_read_more")} <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </article>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function renderGalleryPreview() {
+      const container = document.getElementById('gallery-preview-container');
+      if (!container) return;
+
+      // Slice 4 items for homepage preview
+      const galleryItems = APP_DATA.gallery.slice(0, 4);
+      let html = '';
+
+      galleryItems.forEach(item => {
+        html += `
+          <div class="gallery-card animate-fade-in" onclick="location.href='gallery.html'">
+            <img class="gallery-card-img" src="${item.image}" alt="${t(item.title)}">
+            <div class="gallery-card-overlay">
+              <span class="gallery-card-cat">${t(item.category)}</span>
+              <h4 class="gallery-card-title">${t(item.title)}</h4>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function renderCreativePreview() {
+      const container = document.getElementById('creative-preview-container');
+      if (!container) return;
+
+      // Get one poem and one story as featured previews
+      const poem = APP_DATA.creative.find(c => c.type === 'Poem');
+      const story = APP_DATA.creative.find(c => c.type === 'Story');
+
+      let html = '';
+
+      if (story) {
+        html += `
+          <div class="creative-featured-card animate-slide-up">
+            <span class="creative-badge">${t("tab_story")}</span>
+            <a href="creative.html?id=${story.id}"><h3 class="creative-title">${t(story.title)}</h3></a>
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">${t("creative_author_prefix")} ${t(story.author)} | ${t(story.readTime)}</span>
+            <p class="creative-excerpt">${t(story.excerpt)}</p>
+            <a href="creative.html?id=${story.id}" class="read-more-btn" style="align-self: flex-start;">${t("creative_read_story")} <i class="fas fa-arrow-right"></i></a>
+          </div>
+        `;
+      }
+
+      if (poem) {
+        html += `
+          <div class="creative-featured-card animate-slide-up" style="animation-delay: 0.15s;">
+            <span class="creative-badge" style="background-color: var(--primary); color: white;">${t("tab_poem")}</span>
+            <a href="creative.html?id=${poem.id}"><h3 class="creative-title">${t(poem.title)}</h3></a>
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">${t("creative_poet_prefix")} ${t(poem.author)} | ${t(poem.readTime)}</span>
+            <p class="creative-excerpt">${t(poem.excerpt)}</p>
+            <a href="creative.html?id=${poem.id}" class="read-more-btn" style="align-self: flex-start;">${t("creative_read_poem")} <i class="fas fa-arrow-right"></i></a>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

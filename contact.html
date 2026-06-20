@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सम्पर्क | परिवर्तनका लागि आवाज</title>
+  <meta name="description" content="हामीलाई सम्पर्क गर्नुहोस्, हाम्रो कार्यालयको नक्सा हेर्नुहोस् वा तपाईंको कथा, कविता वा तस्बिर सिधै बुझाउनुहोस्।">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">अ</div>
+        <div class="logo-text">
+          <span class="logo-main" data-i18n="logo_main">परिवर्तनका लागि आवाज</span>
+          <span class="logo-sub" data-i18n="logo_sub">Pariwantan Ka Lagi Aawaj</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">गृहपृष्ठ (Home)</a></li>
+          <li><a href="news.html" class="nav-link" data-i18n="nav_news">समाचार (News)</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">तस्बिरहरू (Gallery)</a></li>
+          <li><a href="creative.html" class="nav-link" data-i18n="nav_creative">सृजना (Creative Corner)</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">हाम्रो बारेमा (About)</a></li>
+          <li><a href="contact.html" class="nav-link active" data-i18n="nav_contact">सम्पर्क (Contact)</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="nav-search-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container animate-fade-in" style="min-height: 70vh; padding: 2.5rem 0;">
+    <div class="section-header">
+      <h1 class="section-title" data-i18n="contact_title">हामीलाई सम्पर्क गर्नुहोस् (Contact Us)</h1>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Info Panel -->
+      <div class="contact-info-panel">
+        <div>
+          <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; color: var(--primary);" data-i18n="contact_info_title">सम्पर्क विवरणहरू</h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;" data-i18n="contact_info_desc">
+            हाम्रो सञ्चार माध्यम वा साहित्यिक कुनामा कुनै जिज्ञासा, सुझाव वा प्रतिक्रिया भएमा निम्न माध्यमबाट सिधै सम्पर्क गर्न सक्नुहुन्छ।
+          </p>
+        </div>
+
+        <ul class="contact-details">
+          <li class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail-content">
+              <h4 data-i18n="contact_office_title">मुख्य कार्यालय</h4>
+              <p data-i18n="contact_office_desc">धुलिखेल नगरपालिका-४, काभ्रेपलाञ्चोक, बागमती प्रदेश, नेपाल</p>
+            </div>
+          </li>
+          <li class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-detail-content">
+              <h4 data-i18n="contact_phone_title">फोन नम्बरहरू</h4>
+              <p data-i18n="contact_phone_desc">+९७७-११-४९०१२३ (कार्यालय), ९८५१२३४५६७</p>
+            </div>
+          </li>
+          <li class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail-content">
+              <h4 data-i18n="contact_email_title">इमेल ठेगाना</h4>
+              <p data-i18n="contact_email_desc">info@pariwantanaawaj.org.np (सामान्य), editor@pariwantanaawaj.org.np (सम्पादकीय)</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Map Container -->
+        <div class="map-container">
+          <!-- Google Maps Embed for Dhulikhel location -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14136.757657962453!2d85.54145955!3d27.618641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb092c4d64f0b3%3A0x6e975a5eef6b539c!2sDhulikhel!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Forms Panel -->
+      <div class="contact-form-panel">
+        <h3 class="contact-form-title" data-i18n="contact_form_title">सन्देश पठाउनुहोस् (Send Message)</h3>
+        
+        <form id="contact-message-form">
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact_form_label_name">नाम (Your Name) *</label>
+            <input type="text" class="form-control" placeholder="तपाईंको पूरा नाम लेख्नुहोस्" required id="contact-name" data-i18n="contact_form_placeholder_name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact_form_label_email">इमेल (Email Address) *</label>
+            <input type="email" class="form-control" placeholder="तपाईंको इमेल ठेगाना" required id="contact-email" data-i18n="contact_form_placeholder_email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact_form_label_subject">विषय (Subject) *</label>
+            <input type="text" class="form-control" placeholder="कुन सन्दर्भमा हो?" required id="contact-subject" data-i18n="contact_form_placeholder_subject">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact_form_label_msg">सन्देश वा जिज्ञासा (Message) *</label>
+            <textarea class="form-control" rows="5" placeholder="तपाईंको सन्देश यहाँ लेख्नुहोस्..." required id="contact-message" data-i18n="contact_form_placeholder_msg"></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="contact_form_btn">
+            <i class="fas fa-paper-plane"></i> सन्देश पठाउनुहोस्
+          </button>
+        </form>
+
+        <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed var(--border); text-align: center;">
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;" data-i18n="contact_cta_title">तपाईंसँग साहित्यिक सिर्जना वा तस्बिर छ?</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;" data-i18n="contact_cta_desc">
+            हाम्रो साहित्यिक कुनामा रचना वा तस्बिर छाप्नको लागि सिधै सामग्री बुझाउनुहोस्।
+          </p>
+          <button class="btn-primary trigger-submit-modal" style="background-color: var(--accent); color: var(--text);" data-i18n="contact_cta_btn">
+            <i class="fas fa-feather-alt"></i> सिर्जना बुझाउनुहोस्
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo-link footer-logo">
+          <div class="logo-icon" style="box-shadow: none;">अ</div>
+          <div class="logo-text">
+            <span class="logo-main" data-i18n="logo_main">परिवर्तनका लागि आवाज</span>
+            <span class="logo-sub" style="color: var(--accent);" data-i18n="logo_sub">Pariwantan Ka Lagi Aawaj</span>
+          </div>
+        </div>
+        <p class="footer-desc" data-i18n="footer_desc">
+          यो एक स्थानीय सञ्चार माध्यम हो, जसले समाजमा सकारात्मक परिवर्तनका लागि स्थानीय आवाज, संस्कृति, साहित्य र जनचासोका सवालहरूलाई उजागर गर्दछ।
+        </p>
+        <div class="footer-socials">
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_links_title">द्रुत लिङ्कहरू</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">गृहपृष्ठ</a></li>
+          <li><a href="news.html" data-i18n="nav_news">ताजा समाचार</a></li>
+          <li><a href="gallery.html" data-i18n="nav_gallery">तस्बिर ग्यालरी</a></li>
+          <li><a href="creative.html" data-i18n="nav_creative">साहित्यिक कुना</a></li>
+          <li><a href="about.html" data-i18n="nav_about">हाम्रो बारेमा</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_news_title">विधागत समाचार</h3>
+        <ul class="footer-links">
+          <li><a href="news.html?cat=Local" data-i18n="cat_local">स्थानीय (Local)</a></li>
+          <li><a href="news.html?cat=Society" data-i18n="cat_society">समाज (Society)</a></li>
+          <li><a href="news.html?cat=Culture" data-i18n="cat_culture">संस्कृति (Culture)</a></li>
+          <li><a href="news.html?cat=Environment" data-i18n="cat_environment">वातावरण (Environment)</a></li>
+          <li><a href="news.html?cat=Politics" data-i18n="cat_politics">राजनीति (Politics)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_contact_title">सम्पर्क जानकारी</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-top: 0.25rem;"></i>
+            <span data-i18n="footer_contact_address">धुलिखेल नगरपालिका-४, काभ्रेपलाञ्चोक, नेपाल</span>
+          </li>
+          <li>
+            <i class="fas fa-phone" style="color: var(--accent);"></i>
+            <span>+९७७-११-४९०१२३, ९८५१२३४५६७</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope" style="color: var(--accent);"></i>
+            <span>info@pariwantanaawaj.org.np</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; २०२६ <span data-i18n="footer_rights">परिवर्तनका लागि आवाज। सबै अधिकार सुरक्षित।</span> | <a href="admin.html" style="color: var(--accent); font-weight: 600;" data-i18n="footer_admin_link">नियन्त्रण कक्ष (Admin Panel)</a></p>
+      <p data-i18n="footer_design">डिजाईन: <a href="about.html" style="color: var(--accent); font-weight: 600;">स्थानीय युवा सञ्जाल</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/translator.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Contact Form Listener -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contact-message-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contact-name').value;
+          const subject = document.getElementById('contact-subject').value;
+
+          if (typeof showNotification === 'function') {
+            showNotification(`नमस्ते ${name}! तपाईंको सन्देश "${subject}" विषय अन्तर्गत दर्ता भएको छ। हामी छिट्टै तपाईंको इमेलमा सम्पर्क गर्नेछौँ।`);
+          } else {
+            alert("हामीले तपाईंको सन्देश प्राप्त गर्यौँ, धन्यवाद!");
+          }
+          
+          contactForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
