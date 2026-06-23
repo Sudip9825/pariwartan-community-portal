@@ -1,0 +1,19 @@
+# Supabase project configuration
+
+project_id = "pariwartan-community-portal"
+
+# Configuration for individual edge functions
+# For non-"user" auth modes, verify_jwt must be set to false so the
+# @supabase/server SDK can handle validation and clients appropriately.
+
+[functions.todos]
+verify_jwt = true
+
+[functions.admin-action]
+verify_jwt = false
+
+[functions.public-data]
+verify_jwt = false
+
+[functions.general]
+verify_jwt = false

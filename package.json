@@ -1,0 +1,12 @@
+{
+  "name": "pariwartan-community-portal",
+  "version": "1.0.0",
+  "description": "Voice for Change (Pariwartan ka lagi Aawaj) community portal with Supabase Edge Functions",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@supabase/server": "^1.1.0"
+  }
+}
